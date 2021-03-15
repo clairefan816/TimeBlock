@@ -7,3 +7,17 @@
 .Today{
     text-align: center;
 }
+
+.Calender-Container{
+    display: grid;
+    width: auto;
+    grid-template-columns: 1fr 2fr 2fr;
+    grid-gap: 10px 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    grid-auto-flow: column;
+}
+
+.Left-Right-Slots{
+    border: 1px solid black;
+}
