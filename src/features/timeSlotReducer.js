@@ -18,7 +18,7 @@ const initState = {
                     color: null
                 },
             ],
-    LastClickOfSlot: 1,
+    LastClickOfSlot: -1,
 };
 
 export default function timeSlotReducer(preState = initState, action){
