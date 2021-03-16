@@ -1,9 +1,11 @@
 Progress:
-March 14 2021 1 hour
 
-1. Create the project
-2. Create four components: Header, Sidebar, Day, Task
-3. Create basic grid layout
+March 16 2021 1:30
+1. Switch 2D array to 1D array of objects
+2. Setting the default status of background color, null works, "null" also works
+2. To be remember Tag color in Day.js is the same with Task color => move to redux as the same data
+3. 
+
 
 March 15 2021 1.5 hours
 
@@ -34,4 +36,8 @@ March 15 2021 1.5 hours
 
    }
 
-4. 
+March 14 2021 1 hour
+
+1. Create the project
+2. Create four components: Header, Sidebar, Day, Task
+3. Create basic grid layout
