@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
-import Day from './components/Day/Day'
-import Task from './components/Task/Task'
+import DayContainer from './containers/DayContainer'
+import TaskContainer from './containers/TaskContainer'
 import Header from './components/Header/Header'
 import Sidebar from './components/Sidebar/Sidebar'
 import './App.css'
@@ -11,9 +11,9 @@ function App() {
     <div className="App">
       <Header />
       <Sidebar />
-      <div className="MainContent">
-        <Day />
-        <Task />
+          <div className="MainContent">
+        <DayContainer />
+        <TaskContainer />
       </div>
     </div>
   );

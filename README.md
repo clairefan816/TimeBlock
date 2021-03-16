@@ -1,10 +1,10 @@
 Progress:
 
-March 16 2021 1:30
+March 16 2021 1:30 - 3pm
 1. Switch 2D array to 1D array of objects
 2. Setting the default status of background color, null works, "null" also works
-2. To be remember Tag color in Day.js is the same with Task color => move to redux as the same data
-3. 
+3. Move all data to redux
+
 
 
 March 15 2021 1.5 hours
