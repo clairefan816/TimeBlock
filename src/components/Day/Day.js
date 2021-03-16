@@ -12,11 +12,15 @@ class Day extends Component {
     // }
 
     render(){
-        const {TimeTags, TimeSlots, LastClickOfSlot} = this.props.dayData
+        const { TimeTags, TimeSlots, LastClickOfSlot } = this.props.dayData
+        const { Task, TaskColors} = this.props.taskData
+        const { onSelectClick } = this.props;
+
+        // console.log(TaskColors[0])
         return(
         <div className="Day">
             <div className="Today">
-                I am the Day Component
+                {LastClickOfSlot}
             </div>
             <div className="Calender-Container">
                 <div className="TimeTags-Container">
@@ -24,11 +28,13 @@ class Day extends Component {
                 </div>
                 <div className="Timeslots-Container">
                     {TimeSlots.map((timeslot, slotIndex)=>{
-                        let slotcolor = timeslot.color;
+                        let tempInd = TimeSlots[slotIndex].color;
+                        let strColor = TaskColors[tempInd];
                         return(<div key={slotIndex} className="timeslot" 
-                        style={{backgroundColor:slotcolor}} 
-                        // onClick={() => this.handlerLastClickOfSlot(slotIndex)}
-                        >{timeslot.text}</div>)})}
+                        onClick={()=>onSelectClick(slotIndex)}
+                        style={{backgroundColor:strColor}}
+                        >{timeslot.text}</div>)
+                        })}
                 </div>
             </div>
         </div>

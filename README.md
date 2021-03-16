@@ -1,10 +1,11 @@
 Progress:
 
-March 16 2021 1:30 - 3pm
+March 16 2021 1:30 - 5pm
 1. Switch 2D array to 1D array of objects
 2. Setting the default status of background color, null works, "null" also works
 3. Move all data to redux
-
+4. Complete data communication in between components
+5. Handle first click event
 
 
 March 15 2021 1.5 hours

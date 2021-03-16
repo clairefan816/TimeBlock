@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <Header />
       <Sidebar />
-          <div className="MainContent">
+      <div className="MainContent">
         <DayContainer />
         <TaskContainer />
       </div>
