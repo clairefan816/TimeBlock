@@ -6,4 +6,15 @@ function mapStateToProps(state){
         taskData : state.task_reducer
     }
 }
-export default connect(mapStateToProps)(Task)
+
+function mapDispatchToProps(dispatch, props){
+    return {
+        onSelectTaskClick:(selectedIndex) => {
+            dispatch({type:"SELECT_TASK", data: selectedIndex})
+          },
+        onClearTaskClick : (selectedIndex) => {
+            dispatch({type:"CLEAR_TASK", data: selectedIndex})
+        }
+    }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(Task)

@@ -3,20 +3,22 @@ import './Task.css'
 
 class Task extends Component {
     render(){
-        const { Tasks, TaskColors } = this.props.taskData;
+        const { Tasks, TaskColors, PickedColor } = this.props.taskData;
+        const { onSelectTaskClick } = this.props;
+        console.log(Tasks);
         return(
         <div className="Task">
             <div className="TaskContent">
-                {Tasks.map((task, index)=>{
-                    let str = TaskColors[index]
+                {Tasks.map((task, taskIndex)=>{
+                    let str = TaskColors[taskIndex]
                     return (
-                        <div className="Task-Block" style={{backgroundColor:str}}>
+                        <div className="Task-Block" style={{backgroundColor:str}}
+                        onClick={()=>onSelectTaskClick(taskIndex)}>
                             {task}
                         </div>
                     )
                 })}
             </div>
-            
         </div>
         )
     }
