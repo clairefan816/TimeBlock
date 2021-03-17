@@ -1,6 +1,6 @@
 Progress:
 
-March 16 2021 1:30 - 5pm
+March 16 2021 1:30 - 5:30pm
 1. Switch 2D array to 1D array of objects
 2. Setting the default status of background color, null works, "null" also works
 3. Move all data to redux
