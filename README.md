@@ -7,6 +7,9 @@ March 16 2021 1:30 - 5:30pm
 4. Complete data communication in between components
 5. Handle first click event on Day Component
 6. Handle first click event on Task Component
+11pm - 12pm
+7. Fixed all functions
+8. Fixed selected and unselected
 
 
 March 15 2021 1.5 hours

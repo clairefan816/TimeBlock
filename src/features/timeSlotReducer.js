@@ -27,14 +27,13 @@ const initState = {
 export default function timeSlotReducer(preState = initState, action){
     const { type, data } = action;
     if (type === "SELECT_SLOT"){
-        let selected = {
-            text: preState.TimeSlots[data].text,
-            color: "grey"
+        if (data === preState.LastClickOfSlot){
+            return {
+                ...preState, LastClickOfSlot: -1
+            }
         }
-        preState.TimeSlots[data] = selected;
-        let newTime = JSON.parse(JSON.stringify(preState.TimeSlots));
         return {
-            ...preState, LastClickOfSlot: data, TimeSlots: newTime
+            ...preState, LastClickOfSlot: data
         }
     } else if (type === "SELECT_TASK"){
         if (preState.LastClickOfSlot != -1){
@@ -46,7 +45,7 @@ export default function timeSlotReducer(preState = initState, action){
             preState.TimeSlots[preState.LastClickOfSlot] = connected;
             let newTime = JSON.parse(JSON.stringify(preState.TimeSlots));
             return {
-                ...preState, PickedColor:data, LastClickOfSlot: -1
+                ...preState, PickedColor:data, LastClickOfSlot: -1, Timeslots : newTime
             }
             
         } else {
