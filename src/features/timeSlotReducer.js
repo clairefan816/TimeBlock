@@ -36,7 +36,7 @@ export default function timeSlotReducer(preState = initState, action){
             ...preState, LastClickOfSlot: data
         }
     } else if (type === "SELECT_TASK"){
-        if (preState.LastClickOfSlot != -1){
+        if (preState.LastClickOfSlot !== -1){
             let newColor = preState.TaskColors[data];
             let connected = {
                 text : preState.TimeSlots[preState.LastClickOfSlot].text,
@@ -49,7 +49,7 @@ export default function timeSlotReducer(preState = initState, action){
             }
             
         } else if (type === "CLEAR_TASK"){
-            if (preState.LastClickOfSlot != -1){
+            if (preState.LastClickOfSlot !== -1){
                 let clearcolor = {
                     text : preState.TimeSlots[preState.LastClickOfSlot].text,
                     color: null
