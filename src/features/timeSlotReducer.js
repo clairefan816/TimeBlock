@@ -19,8 +19,8 @@ const initState = {
                 },
             ],
     LastClickOfSlot: -1,
-    Tasks : ["Sleep", "Reading", "Sleep", "Reading","Sleep", "Reading"],
-    TaskColors: ["Green", "Red", "Orange", "Yellow", "Blue", "Pink"],
+    Tasks : ["Sleep", "Reading", "Sleep", "Reading","Sleep", "Reading", "Delete"],
+    TaskColors: ["Green", "Red", "Orange", "Yellow", "Blue", "Pink", "AliceBlue"],
     PickedColor : -1
 };
 
@@ -48,8 +48,18 @@ export default function timeSlotReducer(preState = initState, action){
                 ...preState, PickedColor:data, LastClickOfSlot: -1, Timeslots : newTime
             }
             
-        } else {
-            return preState;
+        } else if (type === "CLEAR_TASK"){
+            if (preState.LastClickOfSlot != -1){
+                let clearcolor = {
+                    text : preState.TimeSlots[preState.LastClickOfSlot].text,
+                    color: null
+                }
+                preState.TimeSlots[preState.LastClickOfSlot] = clearcolor;
+                let newTime = JSON.parse(JSON.stringify(preState.TimeSlots));
+                return {
+                    ...preState, LastClickOfSlot: -1, Timeslots : newTime
+                }
+            }
         }
     }
     return preState;

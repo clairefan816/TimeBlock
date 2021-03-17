@@ -12,8 +12,8 @@ function mapDispatchToProps(dispatch, props){
         onSelectTaskClick:(selectedIndex) => {
             dispatch({type:"SELECT_TASK", data: selectedIndex})
           },
-        onClearTaskClick : (selectedIndex) => {
-            dispatch({type:"CLEAR_TASK", data: selectedIndex})
+        onClearTaskClick : () => {
+            dispatch({type:"CLEAR_TASK"})
         }
     }
 }

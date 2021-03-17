@@ -4,7 +4,7 @@ import './Task.css'
 class Task extends Component {
     render(){
         const { TimeTags, TimeSlots, LastClickOfSlot, Tasks, TaskColors, PickedColor } = this.props.taskData;
-        const { onSelectTaskClick } = this.props;
+        const { onSelectTaskClick, onClearTaskClick } = this.props;
         
         return(
         <div className="Task">
@@ -19,6 +19,7 @@ class Task extends Component {
                     )
                 })}
             </div>
+            {/* <button onClick={()=>onClearTaskClick()}>Delete</button> */}
             <div>{PickedColor}</div>
         </div>
         )
