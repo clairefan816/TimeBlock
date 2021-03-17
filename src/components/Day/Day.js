@@ -12,11 +12,10 @@ class Day extends Component {
     // }
 
     render(){
-        const { TimeTags, TimeSlots, LastClickOfSlot } = this.props.dayData
-        const { Task, TaskColors, PickedColor} = this.props.taskData
+        const { TimeTags, TimeSlots, LastClickOfSlot, Tasks, TaskColors, PickedColor } = this.props.dayData
+        // const { Task, TaskColors, PickedColor} = this.props.taskData
         const { onSelectClick } = this.props;
-
-        // console.log(TaskColors[0])
+        console.log(TimeTags);
         return(
         <div className="Day">
             <div className="Today">
@@ -29,7 +28,8 @@ class Day extends Component {
                 <div className="Timeslots-Container">
                     {TimeSlots.map((timeslot, slotIndex)=>{
                         // let strColor = (slotIndex === LastClickOfSlot) ? "Purple":"White";
-                        let strColor = (PickedColor === LastClickOfSlot)? TaskColors[PickedColor]: "White";
+                        // let strColor = (PickedColor === LastClickOfSlot)? TaskColors[PickedColor]: "White";
+                        let strColor = timeslot.color;
                         return(<div key={slotIndex} className="timeslot" 
                         onClick={()=>onSelectClick(slotIndex)}
                         style={{backgroundColor:strColor}}

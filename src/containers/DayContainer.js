@@ -5,7 +5,6 @@ import Day from '../components/Day/Day'
 function mapStateToProps(state){
     return {
         dayData : state.timeSlot_reducer,
-        taskData : state.task_reducer
     }
 }
 

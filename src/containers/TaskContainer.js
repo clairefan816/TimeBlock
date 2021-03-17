@@ -3,7 +3,7 @@ import Task from '../components/Task/Task'
 
 function mapStateToProps(state){
     return {
-        taskData : state.task_reducer
+        taskData : state.timeSlot_reducer
     }
 }
 

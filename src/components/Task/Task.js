@@ -3,9 +3,9 @@ import './Task.css'
 
 class Task extends Component {
     render(){
-        const { Tasks, TaskColors, PickedColor } = this.props.taskData;
+        const { TimeTags, TimeSlots, LastClickOfSlot, Tasks, TaskColors, PickedColor } = this.props.taskData;
         const { onSelectTaskClick } = this.props;
-        console.log(Tasks);
+        
         return(
         <div className="Task">
             <div className="TaskContent">
@@ -19,6 +19,7 @@ class Task extends Component {
                     )
                 })}
             </div>
+            <div>{PickedColor}</div>
         </div>
         )
     }
