@@ -28,7 +28,8 @@ class Day extends Component {
                 </div>
                 <div className="Timeslots-Container">
                     {TimeSlots.map((timeslot, slotIndex)=>{
-                        let strColor = (slotIndex === LastClickOfSlot) ? "Purple":"White";
+                        // let strColor = (slotIndex === LastClickOfSlot) ? "Purple":"White";
+                        let strColor = (PickedColor === LastClickOfSlot)? TaskColors[PickedColor]: "White";
                         return(<div key={slotIndex} className="timeslot" 
                         onClick={()=>onSelectClick(slotIndex)}
                         style={{backgroundColor:strColor}}
