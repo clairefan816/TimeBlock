@@ -10,4 +10,4 @@ class Manual extends Component {
     }
 }
 
-export default Manual;
+export default Manual;s
