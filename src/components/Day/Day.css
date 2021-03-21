@@ -1,9 +1,9 @@
 .Day{
     margin-left: 20px;
     margin-right: 20px;
-    background-color: AliceBlue;
+    background-color: rgb(54, 59, 95);
+    /* background-color: AliceBlue; */
 }
-
 .Today{
     text-align: center;
 }
@@ -32,4 +32,5 @@
 }
 .timeslot{
     border: 1px solid black;
+    text-align: center;
 }
