@@ -1,18 +1,15 @@
 import React, {Component} from 'react';
 import './Header.css';
+import { NavLink } from 'react-router-dom'
 
 class Header extends Component {
     render(){
         return(
-            <nav id="nav-wrap">
-
-            <ul id="nav" className="nav">
-               <li className="current"><a className="smoothscroll" href="#home">Home</a></li>
-               <li><a className="smoothscroll" href="#about">About</a></li>
-               <li><a className="smoothscroll" href="#contact">Sign up/ Log in</a></li>
-            </ul>
-   
-         </nav>
+            <div className="Header">
+                <NavLink to='/login'>Landing Page   </NavLink>
+                <NavLink to='/time'>Calendar Page   </NavLink>
+                <NavLink to='/manual'>Manual Page   </NavLink>
+            </div>
         )
     }
 }
