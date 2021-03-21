@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
-import './Sidebar.css'
 
-class Sidebar extends Component {
+class Manual extends Component {
     render(){
         return(
         <div className="Sidebar">
@@ -11,4 +10,4 @@ class Sidebar extends Component {
     }
 }
 
-export default Sidebar;
+export default Manual;

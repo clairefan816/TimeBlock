@@ -1,5 +1,8 @@
 Progress:
 
+March 20 2021 9:50 - 10:50 pm
+1. Add Router to app
+
 March 16 2021 1:30 - 5:30pm
 1. Switch 2D array to 1D array of objects
 2. Setting the default status of background color, null works, "null" also works
