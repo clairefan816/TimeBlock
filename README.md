@@ -1,9 +1,16 @@
 Progress:
-March 14 2021 1 hour
 
-1. Create the project
-2. Create four components: Header, Sidebar, Day, Task
-3. Create basic grid layout
+March 16 2021 1:30 - 5:30pm
+1. Switch 2D array to 1D array of objects
+2. Setting the default status of background color, null works, "null" also works
+3. Move all data to redux
+4. Complete data communication in between components
+5. Handle first click event on Day Component
+6. Handle first click event on Task Component
+11pm - 12:30pm
+7. Fixed all functions
+8. Fixed selected and unselected
+
 
 March 15 2021 1.5 hours
 
@@ -34,4 +41,8 @@ March 15 2021 1.5 hours
 
    }
 
-4. 
+March 14 2021 1 hour
+
+1. Create the project
+2. Create four components: Header, Sidebar, Day, Task
+3. Create basic grid layout
