@@ -1,7 +1,7 @@
 .Day{
     margin-left: 20px;
     margin-right: 20px;
-    background-color: antiquewhite;
+    background-color: rgb(54, 59, 95);
 }
 
 .Today{
@@ -20,4 +20,5 @@
 
 .Left-Right-Slots{
     border: 1px solid black;
+    text-align: center;
 }
