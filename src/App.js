@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import DayContainer from './containers/DayContainer'
 import TaskContainer from './containers/TaskContainer'
 import Header from './components/Header/Header'
