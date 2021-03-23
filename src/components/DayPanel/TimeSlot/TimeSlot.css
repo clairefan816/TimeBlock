@@ -1,0 +1,6 @@
+.timeslot {
+    margin-left: 10%;
+    margin-right: 10%;
+	/* border-radius: 1em 1em 1em 1em; */
+    box-shadow: 0px 0px 32px -18px rgba(0, 0, 0, 0.75);
+}

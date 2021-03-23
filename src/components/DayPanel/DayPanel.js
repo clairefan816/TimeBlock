@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import TimeSlot from './../TimeSlot/TimeSlot'
-import './Day.css'
+import TimeSlot from './TimeSlot/TimeSlot'
+import './DayPanel.css'
 
 class Day extends Component {
 

@@ -1,5 +1,5 @@
 import {connect} from "react-redux";
-import Day from '../components/Day/Day'
+import DayPanel from '../components/DayPanel/DayPanel'
 
 
 function mapStateToProps(state){
@@ -18,4 +18,4 @@ function mapDispatchToProps(dispatch, props){
         }
     }
 }
-export default connect(mapStateToProps, mapDispatchToProps)(Day)
+export default connect(mapStateToProps, mapDispatchToProps)(DayPanel)

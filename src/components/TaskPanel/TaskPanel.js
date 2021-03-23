@@ -1,21 +1,19 @@
 import React, {Component} from 'react';
-import './Task.css'
+import TaskSlot from "./TaskSlot/TaskSlot"
+import './TaskPanel.css'
 
-class Task extends Component {
+class TaskPanel extends Component {
     render(){
         const { TimeTags, TimeSlots, LastClickOfSlot, Tasks, TaskColors, PickedColor } = this.props.taskData;
         const { onSelectTaskClick, onClearTaskClick } = this.props;
         
         return(
-        <div className="Task">
+        <div className="TaskPanel">
             <div className="TaskContent">
                 {Tasks.map((task, taskIndex)=>{
                     let str = TaskColors[taskIndex]
                     return (
-                        <div className="Task-Block" style={{backgroundColor:str}}
-                        onClick={()=>onSelectTaskClick(taskIndex)}>
-                            {task}
-                        </div>
+                        <TaskSlot str={str} task={task} taskIndex={taskIndex} onSelectTaskClick={onSelectTaskClick}/>
                     )
                 })}
             </div>
@@ -26,4 +24,4 @@ class Task extends Component {
     }
 }
 
-export default Task;
+export default TaskPanel;
