@@ -111,8 +111,8 @@ const initState = {
 
             ],
     LastClickOfSlot: -1,
-    Tasks : ["Sleep", "Reading", "Sleep", "Reading","Sleep", "Reading", "Delete"],
-    TaskColors: ["Green", "Red", "Orange", "Yellow", "Blue", "Pink", "AliceBlue"],
+    Tasks : ["Sleep", "Reading", "Exercise", "Study","Gaming", "Delete"],
+    TaskColors: ["#FFAC81", "#FF928B", "#FEC3A6", "#EFE9AE", "#CDEAC0", "AliceBlue"],
     PickedColor : -1
 };
 

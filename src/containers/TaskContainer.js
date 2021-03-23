@@ -1,5 +1,5 @@
 import {connect} from "react-redux";
-import Task from '../components/Task/Task'
+import TaskPanel from '../components/TaskPanel/TaskPanel'
 
 function mapStateToProps(state){
     return {
@@ -17,4 +17,4 @@ function mapDispatchToProps(dispatch, props){
         }
     }
 }
-export default connect(mapStateToProps, mapDispatchToProps)(Task)
+export default connect(mapStateToProps, mapDispatchToProps)(TaskPanel)

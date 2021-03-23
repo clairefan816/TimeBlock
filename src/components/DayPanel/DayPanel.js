@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import './Day.css'
+import TimeSlot from './TimeSlot/TimeSlot'
+import './DayPanel.css'
 
 class Day extends Component {
 
@@ -15,7 +16,9 @@ class Day extends Component {
         const { TimeTags, TimeSlots, LastClickOfSlot, Tasks, TaskColors, PickedColor } = this.props.dayData
         // const { Task, TaskColors, PickedColor} = this.props.taskData
         const { onSelectClick } = this.props;
-        console.log(TimeTags);
+        console.log(onSelectClick)
+        // console.log(this.props)
+        // console.log(TimeTags);
         return(
         <div className="Day">
             <div className="Today">
@@ -27,13 +30,9 @@ class Day extends Component {
                 </div>
                 <div className="Timeslots-Container">
                     {TimeSlots.map((timeslot, slotIndex)=>{
-                        // let strColor = (slotIndex === LastClickOfSlot) ? "Purple":"White";
-                        // let strColor = (PickedColor === LastClickOfSlot)? TaskColors[PickedColor]: "White";
-                        let strColor = (slotIndex === LastClickOfSlot) ? "Azure" : timeslot.color;
-                        return(<div key={slotIndex} className="timeslot" 
-                        onClick={()=>onSelectClick(slotIndex)}
-                        style={{backgroundColor:strColor}}
-                        >{timeslot.text}</div>)
+                        //备选颜色：#FF96A5（粉色）， #66DCEC（蓝色），#A39D9E（灰色）
+                        let strColor = (slotIndex === LastClickOfSlot) ? "#66DCEC" : timeslot.color;
+                        return(<TimeSlot slotIndex={slotIndex} slotIndex={slotIndex} timeslot={timeslot} onSelectClick={onSelectClick} strColor={strColor}/>)
                         })}
                 </div>
             </div>
