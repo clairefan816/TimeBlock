@@ -2,109 +2,110 @@ const initState = {
     TimeTags : ["00:00", "01:00", "02:00", "03:00", "04:00", "05:00", "06:00", "07:00", "08:00", "09:00",
                 "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00",
                 "19:00", "20:00", "21:00", "22:00", "23:00", "24:00"],
+    
     TimeSlots:[
                 {
-                    text: "00-first-half",
+                    text: "00:00 - 00:30",
                     color: null
                 },
                 {
-                    text: "00-second-half",
+                    text: "00:30 - 01:00",
                     color: null
                 },
                 {
-                    text: "01-first-half",
+                    text: "00:00 - 00:30",
                     color: null
                 },
                 {
-                    text: "02-second-half",
+                    text: "00:30 - 01:00",
                     color: null
                 },
                 {
-                    text: "03-first-half",
+                    text: "00:00 - 00:30",
                     color: null
                 },
                 {
-                    text: "04-first-half",
+                    text: "00:30 - 01:00",
                     color: null
                 },
                 {
-                    text: "05-first-half",
+                    text: "00:00 - 00:30",
                     color: null
                 },
                 {
-                    text: "06-first-half",
+                    text: "00:30 - 01:00",
                     color: null
                 },
                 {
-                    text: "07-first-half",
+                    text: "00:00 - 00:30",
                     color: null
                 },
                 {
-                    text: "08-first-half",
+                    text: "00:30 - 01:00",
                     color: null
                 },
                 {
-                    text: "09-first-half",
+                    text: "00:00 - 00:30",
                     color: null
                 },
                 {
-                    text: "10-first-half",
+                    text: "00:30 - 01:00",
                     color: null
                 },
                 {
-                    text: "11-first-half",
+                    text: "00:00 - 00:30",
                     color: null
                 },
                 {
-                    text: "12-first-half",
+                    text: "00:30 - 01:00",
                     color: null
                 },
                 {
-                    text: "13-first-half",
+                    text: "00:00 - 00:30",
                     color: null
                 },
                 {
-                    text: "14-first-half",
+                    text: "00:30 - 01:00",
                     color: null
                 },
                 {
-                    text: "15-first-half",
+                    text: "00:00 - 00:30",
                     color: null
                 },
                 {
-                    text: "16-first-half",
+                    text: "00:30 - 01:00",
                     color: null
                 },
                 {
-                    text: "17-first-half",
+                    text: "00:00 - 00:30",
                     color: null
                 },
                 {
-                    text: "18-first-half",
+                    text: "00:30 - 01:00",
                     color: null
                 },
                 {
-                    text: "19-first-half",
+                    text: "00:00 - 00:30",
                     color: null
                 },
                 {
-                    text: "20-first-half",
+                    text: "00:30 - 01:00",
                     color: null
                 },
                 {
-                    text: "21-first-half",
+                    text: "00:00 - 00:30",
                     color: null
                 },
                 {
-                    text: "22-first-half",
+                    text: "00:30 - 01:00",
                     color: null
                 },
                 {
-                    text: "23-first-half",
+                    text: "00:00 - 00:30",
                     color: null
                 },
                 {
-                    text: "24-first-half",
+                    text: "00:30 - 01:00",
                     color: null
                 },
 
@@ -115,7 +116,13 @@ const initState = {
     TaskColors: ["#FFAC81", "#FF928B", "#FEC3A6", "#EFE9AE", "#CDEAC0", "AliceBlue"],
     PickedColor : -1
 };
-
+// function timeTagToTimeSlot (TimeTags) {
+//     let timeslotText=[];
+//     for([index, value] of TimeTags.entries()) {
+//         timeslotText.push(TimeTags[index] + " - " + TimeTags[index + 1]);
+//     }
+//     return timeslotText;
+// }
 export default function timeSlotReducer(preState = initState, action){
     const { type, data } = action;
     if (type === "SELECT_SLOT"){

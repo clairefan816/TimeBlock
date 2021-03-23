@@ -1,11 +1,13 @@
 import React, {Component} from 'react';
-import TaskSlot from "./TaskSlot/TaskSlot"
+import { motion } from "framer-motion";
 import './TaskPanel.css'
 
 class TaskPanel extends Component {
     render(){
-        const { TimeTags, TimeSlots, LastClickOfSlot, Tasks, TaskColors, PickedColor } = this.props.taskData;
-        const { onSelectTaskClick, onClearTaskClick } = this.props;
+        // const { TimeTags, TimeSlots, LastClickOfSlot, Tasks, TaskColors, PickedColor } = this.props.taskData;
+        // const { onSelectTaskClick, onClearTaskClick } = this.props;
+        const { Tasks, TaskColors, PickedColor } = this.props.taskData;
+        const { onSelectTaskClick } = this.props;
         
         return(
         <div className="TaskPanel">
@@ -13,11 +15,13 @@ class TaskPanel extends Component {
                 {Tasks.map((task, taskIndex)=>{
                     let str = TaskColors[taskIndex]
                     return (
-                        <TaskSlot str={str} task={task} taskIndex={taskIndex} onSelectTaskClick={onSelectTaskClick}/>
+                        <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} className="Task-Block" style={{backgroundColor:str}}
+                        onClick={()=>onSelectTaskClick(taskIndex)}>
+                            {task}
+                        </motion.div>
                     )
                 })}
             </div>
-            {/* <button onClick={()=>onClearTaskClick()}>Delete</button> */}
             <div>{PickedColor}</div>
         </div>
         )
