@@ -40,7 +40,7 @@
     text-align: center;
 }
 .timeslot{
-    /* border: 1px solid black; */
+    box-shadow: 0px 0px 32px -20px rgba(0, 0, 0, 0.75);
     text-align: center;
 }
 
