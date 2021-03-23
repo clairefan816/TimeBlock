@@ -1,3 +1,7 @@
+// npm install redux
+// npm install router
+// npm install framer-motion
+
 Progress:
 
 March 20 2021 9:50 - 10:50 pm

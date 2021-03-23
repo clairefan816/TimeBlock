@@ -13,13 +13,13 @@ function App() {
 
       <Router>
           <Header />
-          <switch>
+          <Switch>
             <Route exact path='/' component={Landing} />
             <Route exact path='/login' component={Landing} />
             <Route exact path='/time' render={()=>{return <div className="MainContent"><DayContainer /><TaskContainer /></div>}}/>
             <Route exact path='/manual' component={Manual} />
             {/* <Route render={() => <h1>Not found!</h1>} /> */}
-          </switch>
+          </Switch>
       </Router>
 
   );

@@ -32,7 +32,7 @@ class Day extends Component {
                     {TimeSlots.map((timeslot, slotIndex)=>{
                         //备选颜色：#FF96A5（粉色）， #66DCEC（蓝色），#A39D9E（灰色）
                         let strColor = (slotIndex === LastClickOfSlot) ? "#66DCEC" : timeslot.color;
-                        return(<TimeSlot slotIndex={slotIndex} slotIndex={slotIndex} timeslot={timeslot} onSelectClick={onSelectClick} strColor={strColor}/>)
+                        return(<TimeSlot key={slotIndex} slotIndex={slotIndex} timeslot={timeslot} onSelectClick={onSelectClick} strColor={strColor}/>)
                         })}
                 </div>
             </div>
