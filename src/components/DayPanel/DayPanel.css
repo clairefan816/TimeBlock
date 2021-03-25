@@ -4,7 +4,13 @@
     /* background-color: rgb(54, 59, 95); */
     /* background-color: AliceBlue; */
 }
+.DateDisplay{
+    display: grid;
+    grid-template-columns: 10fr 37fr;
+}
 .Today{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
     padding: 20px;
     /* margin-left: 20%; */
     /* margin-right: 20%; */

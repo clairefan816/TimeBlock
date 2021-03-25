@@ -6,7 +6,7 @@ class TaskPanel extends Component {
     render(){
         // const { TimeTags, TimeSlots, LastClickOfSlot, Tasks, TaskColors, PickedColor } = this.props.taskData;
         // const { onSelectTaskClick, onClearTaskClick } = this.props;
-        const { Tasks, TaskColors, PickedColor } = this.props.taskData;
+        const { Tasks, TaskColors } = this.props.taskData;
         const { onSelectTaskClick } = this.props;
         
         return(
@@ -22,7 +22,7 @@ class TaskPanel extends Component {
                     )
                 })}
             </div>
-            <div>{PickedColor}</div>
+            {/* <div>{PickedColor}</div> */}
         </div>
         )
     }
