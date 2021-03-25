@@ -1,12 +1,17 @@
 .Task{
-    text-align: center;
     /* background-color: #EFEFEF; */
     /* border: 2.5px dashed #66DCEC; */
     margin-right: 20px;
 }
 
+.TaskContent{
+    margin-top: 104px;
+}
+
 .Task-Block{
     margin: 15px;
     padding: 5px;
+    text-align: center;
+
     /* border: 1px solid black; */
 }

@@ -5,15 +5,15 @@ class Manual extends Component {
     render(){
         return(
         <div className="ManualPage">
-            <h3>Mark/Override timeslot:</h3>
-            <ul className="list">
-                <ol>Click one of the time slots</ol>
-                <ol>Click one of the colored tasks(Except delete)</ol>
+            <h2>Mark/Override timeslot:</h2>
+            <ul>
+                <ol>1. Click one of the time slots</ol>
+                <ol>2. Click one of the colored tasks(Except delete)</ol>
             </ul>
-            <h3>Delete timeslot:</h3>
-            <ul className="list">
-                <ol>Click one of the time slots</ol>
-                <ol>Click one of the blue "Delete" task</ol>
+            <h2>Delete timeslot:</h2>
+            <ul>
+                <ol>1. Click one of the time slots</ol>
+                <ol>2. Click one of the blue "Delete" task</ol>
             </ul>
         </div>
         )

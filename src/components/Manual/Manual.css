@@ -1,7 +1,18 @@
 .ManualPage {
+    padding: 100px 0;
     text-align: center;
 }
-.list {
-    list-style: circle;
+  
+h2 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+}
+ul {
+    display: inline-block;
+    width: 40%;
     text-align: left;
+}
+
+.ul-center {
+    margin:0 auto;
 }
