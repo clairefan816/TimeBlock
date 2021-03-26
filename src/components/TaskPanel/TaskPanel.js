@@ -15,7 +15,7 @@ class TaskPanel extends Component {
                 {Tasks.map((task, taskIndex)=>{
                     let str = TaskColors[taskIndex]
                     return (
-                        <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} className="Task-Block" style={{backgroundColor:str}}
+                        <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 1.0 }} className="Task-Block" style={{backgroundColor:str}}
                         onClick={()=>onSelectTaskClick(taskIndex)}>
                             {task}
                         </motion.div>
