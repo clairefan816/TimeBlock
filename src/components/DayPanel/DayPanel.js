@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { motion } from "framer-motion";
 import './DayPanel.css'
+import moment from 'moment'
 
 class Day extends Component {
 
@@ -14,17 +15,23 @@ class Day extends Component {
 
     render(){
         // const { TimeTags, TimeSlots, LastClickOfSlot, Tasks, TaskColors, PickedColor } = this.props.dayData
-        const { TimeTags, TimeSlots, LastClickOfSlot} = this.props.dayData
-        const { onSelectClick } = this.props;
-        let today = new Date().toJSON().slice(0,10).replace(/-/g,'/');
+
+        //console.log(this.props.dayData)
+        const { TimeTags, TimeSlots, LastClickOfSlot, Today} = this.props.dayData
+        const { onSelectClick, onNextClick, onPreviousClick } = this.props;
+        //console.log(Today);
+        // let today = new Date().toJSON().slice(0,10).replace(/-/g,'/');
+        let today = Today.format('dddd MMM Do YY');
+        //let tomorrow = Today.clone().add(1, 'day').format('dddd');
+        //let yesterday = Today.clone().add(-1, 'day').format('dddd');
         return(
         <div className="Day">
             <div className="DateDisplay">
                 <div></div>
                 <div className="Today">
-                    <button>Previous Day</button>
-                    {today}
-                    <button>Next Day</button>
+                    <button onClick={()=>onPreviousClick()}> Previous </button>
+                    { today }
+                    <button onClick={()=>onNextClick()}> Next </button>
                 </div>
             </div>
             

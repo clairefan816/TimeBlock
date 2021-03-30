@@ -1,3 +1,5 @@
+
+
 .Task{
     /* background-color: #EFEFEF; */
     /* border: 2.5px dashed #66DCEC; */
@@ -6,6 +8,11 @@
 
 .TaskContent{
     margin-top: 104px;
+    margin-right: 40px;
+    position: fixed;
+    width: 200px;
+    z-index: 10;
+    overflow: auto;
 }
 
 .Task-Block{

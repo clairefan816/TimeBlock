@@ -7,15 +7,24 @@
 .DateDisplay{
     display: grid;
     grid-template-columns: 10fr 37fr;
+ 
+
 }
+
 .Today{
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
     padding: 20px;
     /* margin-left: 20%; */
     /* margin-right: 20%; */
-    background-color: azure;
+    /* background-color: azure; */
     text-align: center;
+    background-image: linear-gradient(to right, #c60fbe, #fd008e, #ff385d, #ff7431, #f7a500, #f7a500, #f7a500, #f7a500, #ff7431, #ff385d, #fd008e, #c60fbe);
+    border-radius:0 0 50% 50%/0  0 100% 100%;
+    transition:5s ease;
+    background-size: 600%;
+    animation:anim 100s linear infinite;
+    /* filter: blur(30px); */
 }
 
 .Calender-Container{

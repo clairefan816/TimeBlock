@@ -7,7 +7,7 @@ class TaskPanel extends Component {
         // const { TimeTags, TimeSlots, LastClickOfSlot, Tasks, TaskColors, PickedColor } = this.props.taskData;
         // const { onSelectTaskClick, onClearTaskClick } = this.props;
         const { Tasks, TaskColors } = this.props.taskData;
-        const { onSelectTaskClick } = this.props;
+        const { onSelectTaskClick, onClearTaskClick } = this.props;
         
         return(
         <div className="TaskPanel">
@@ -21,7 +21,15 @@ class TaskPanel extends Component {
                         </motion.div>
                     )
                 })}
+                <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} className="Task-Block" style={{backgroundColor:"red"}}
+                        onClick={()=>onClearTaskClick()}>
+                            Delete
+                </motion.div>
+                <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} className="Task-Block" style={{backgroundColor:"Green"}}>
+                            Add New
+                </motion.div>
             </div>
+            
             {/* <div>{PickedColor}</div> */}
         </div>
         )

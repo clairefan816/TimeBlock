@@ -15,7 +15,13 @@ function mapDispatchToProps(dispatch, props){
           },
         onClearClick : (selectedIndex) => {
             dispatch({type:"CLEAR_SLOT", data: selectedIndex})
-        }
+        },
+        onNextClick : () => {
+            dispatch({type:"NEXT_DAY"})
+        },
+        onPreviousClick : () => {
+            dispatch({type:"PREVIOUS_DAY"})
+        },
     }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(DayPanel)
