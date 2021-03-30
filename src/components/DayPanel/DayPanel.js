@@ -43,7 +43,7 @@ class Day extends Component {
                         let strColor = (slotIndex === LastClickOfSlot) ? "azure" : timeslot.color;
                         return(
                             <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.98 }} key={slotIndex} className="timeslot" onClick={()=>onSelectClick(slotIndex)} style={{backgroundColor:strColor}}>
-                                {timeslot.text}
+                                {timeslot.task_text === null ? timeslot.text : timeslot.task_text}
                             </motion.div>)
                         })}
                 </div>
