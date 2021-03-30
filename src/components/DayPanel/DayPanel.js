@@ -16,7 +16,6 @@ class Day extends Component {
         // const { TimeTags, TimeSlots, LastClickOfSlot, Tasks, TaskColors, PickedColor } = this.props.dayData
         const { TimeTags, TimeSlots, LastClickOfSlot} = this.props.dayData
         const { onSelectClick } = this.props;
-        console.log(onSelectClick)
         let today = new Date().toJSON().slice(0,10).replace(/-/g,'/');
         return(
         <div className="Day">
@@ -38,7 +37,7 @@ class Day extends Component {
                         let strColor = (slotIndex === LastClickOfSlot) ? "azure" : timeslot.color;
                         return(
                             <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} key={slotIndex} className="timeslot" onClick={()=>onSelectClick(slotIndex)} style={{backgroundColor:strColor}}>
-                                {timeslot.text}
+                                {(timeslot.task_text === null) ? timeslot.text : timeslot.task_text}
                             </motion.div>)
                         })}
                 </div>
