@@ -15,6 +15,7 @@ class Day extends Component {
 
     render(){
         // const { TimeTags, TimeSlots, LastClickOfSlot, Tasks, TaskColors, PickedColor } = this.props.dayData
+
         //console.log(this.props.dayData)
         const { TimeTags, TimeSlots, LastClickOfSlot, Today} = this.props.dayData
         const { onSelectClick, onNextClick, onPreviousClick } = this.props;
@@ -42,8 +43,8 @@ class Day extends Component {
                     {TimeSlots.map((timeslot, slotIndex)=>{
                         let strColor = (slotIndex === LastClickOfSlot) ? "azure" : timeslot.color;
                         return(
-                            <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} key={slotIndex} className="timeslot" onClick={()=>onSelectClick(slotIndex)} style={{backgroundColor:strColor}}>
-                                {(timeslot.task_text === null) ? timeslot.text : timeslot.task_text}
+                            <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.98 }} key={slotIndex} className="timeslot" onClick={()=>onSelectClick(slotIndex)} style={{backgroundColor:strColor}}>
+                                {timeslot.text}
                             </motion.div>)
                         })}
                 </div>
