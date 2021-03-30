@@ -1,3 +1,5 @@
+import moment from 'moment'
+
 const initState = {
     TimeTags : ["00:00", "01:00", "02:00", "03:00", "04:00", "05:00", "06:00", "07:00", "08:00", "09:00",
                 "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00",
@@ -239,6 +241,9 @@ const initState = {
     Tasks : ["Sleep", "Reading", "Exercise", "Study","Gaming"],
     TaskColors: ["#FFAC81", "#FF928B", "#FEC3A6", "#EFE9AE", "#CDEAC0"],
     PickedColor : -1,
+    Today : moment(),
+    //Tomorrow : moment().add(1, 'day').format('dddd'),
+    //Yesterday : moment().add(-1, 'day').format('dddd'),
 };
 // function timeTagToTimeSlot (TimeTags) {
 //     let timeslotText=[];
@@ -285,6 +290,14 @@ export default function timeSlotReducer(preState = initState, action){
             return {
                 ...preState, LastClickOfSlot: -1, Timeslots : newTime
             }
+        }
+    } else if (type === "NEXT_DAY"){
+        return {
+            ...preState, Today: preState.Today.clone().add(1, "day")
+        }
+    } else if (type === "PREVIOUS_DAY"){
+        return {
+            ...preState, Today: preState.Today.clone().add(-1, "day")
         }
     }
     return preState;
