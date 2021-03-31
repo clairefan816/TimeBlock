@@ -21,13 +21,13 @@ class TaskPanel extends Component {
                         </motion.div>
                     )
                 })}
-                <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} className="Task-Block" style={{backgroundColor:"red"}}
+                <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} className="Task-Block" style={{backgroundColor:"aliceblue"}}
                         onClick={()=>onClearTaskClick()}>
                             Delete
                 </motion.div>
-                <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} className="Task-Block" style={{backgroundColor:"Green"}}>
+                {/* <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} className="Task-Block" style={{backgroundColor:"Green"}}>
                             Add New
-                </motion.div>
+                </motion.div> */}
             </div>
             
             {/* <div>{PickedColor}</div> */}
