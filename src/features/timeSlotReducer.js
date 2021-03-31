@@ -240,13 +240,7 @@ const initState = {
     TaskColors: ["#FFAC81", "#FF928B", "#FEC3A6", "#EFE9AE", "#CDEAC0"],
     PickedColor : -1,
 };
-// function timeTagToTimeSlot (TimeTags) {
-//     let timeslotText=[];
-//     for([index, value] of TimeTags.entries()) {
-//         timeslotText.push(TimeTags[index] + " - " + TimeTags[index + 1]);
-//     }
-//     return timeslotText;
-// }
+
 export default function timeSlotReducer(preState = initState, action){
     const { type, data } = action;
     if (type === "SELECT_SLOT"){
@@ -260,7 +254,6 @@ export default function timeSlotReducer(preState = initState, action){
         }
     } else if (type === "SELECT_TASK"){
         if (preState.LastClickOfSlot !== -1){
-            //let newColor = preState.TaskColors[data];
             let connected = {
                 text : preState.TimeSlots[preState.LastClickOfSlot].text,
                 task_text: preState.Tasks[data],
@@ -287,14 +280,5 @@ export default function timeSlotReducer(preState = initState, action){
             }
         }
     }
-    // } else if (type === "NEXT_DAY"){
-    //     return {
-    //         ...preState, Today: preState.Today.clone().add(1, "day")
-    //     }
-    // } else if (type === "PREVIOUS_DAY"){
-    //     return {
-    //         ...preState, Today: preState.Today.clone().add(-1, "day")
-    //     }
-    // }
     return preState;
 }
