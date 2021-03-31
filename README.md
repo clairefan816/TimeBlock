@@ -5,6 +5,10 @@
 // npm install react-bootstrap@1.4.0 react-icons@3.11.0 --save
 // npm install moment --save
 
+March 30.
+1. Separate the Day change reducer from the complete reducer
+
+March 29.
 1. Show text context when assigning task to the time slots
 2. Float the task component
 3. Deprecate delete function

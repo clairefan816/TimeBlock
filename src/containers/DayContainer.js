@@ -5,6 +5,7 @@ import DayPanel from '../components/DayPanel/DayPanel'
 function mapStateToProps(state){
     return {
         dayData : state.timeSlot_reducer,
+        dayChanger : state.dayChange_reducer,
     }
 }
 

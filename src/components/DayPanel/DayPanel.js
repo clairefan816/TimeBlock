@@ -16,8 +16,9 @@ class Day extends Component {
         // const { TimeTags, TimeSlots, LastClickOfSlot, Tasks, TaskColors, PickedColor } = this.props.dayData
 
         //console.log(this.props.dayData)
-        const { TimeTags, TimeSlots, LastClickOfSlot, Today} = this.props.dayData
+        const { TimeTags, TimeSlots, LastClickOfSlot } = this.props.dayData
         const { onSelectClick, onNextClick, onPreviousClick } = this.props;
+        const { Today } = this.props.dayChanger;
         //console.log(Today);
         // let today = new Date().toJSON().slice(0,10).replace(/-/g,'/');
         let today = Today.format('dddd MMM Do YY');
