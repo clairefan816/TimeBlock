@@ -3,6 +3,8 @@ import './Manual.css';
 import Carousel from 'react-bootstrap/Carousel'
 import { Container, Row, Col } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
+import { Line } from "react-chartjs-2";
+import { MDBContainer } from "mdbreact";
 
 import INSTRUCTION1 from '../../instruction1.gif';
 import INSTRUCTION2 from '../../instruction2.gif';
@@ -17,7 +19,54 @@ class Manual extends Component {
     constructor(props){
         super(props);
         this.state = {
-            index : 0
+            index : 0,
+            dataLine: {
+                labels: ["4am/Monday", "8am/Tuesday", "12pm/Wednesday", "4pm/Thursday", "8pm/Friday", "12am/Saturday", "4am/Sunday"],
+                datasets: [
+                  {
+                    label: "Daily Report",
+                    fill: true,
+                    lineTension: 0.3,
+                    backgroundColor: "rgba(225, 204,230, .3)",
+                    borderColor: "rgb(205, 130, 158)",
+                    borderCapStyle: "butt",
+                    borderDash: [],
+                    borderDashOffset: 0.0,
+                    borderJoinStyle: "miter",
+                    pointBorderColor: "rgb(205, 130,1 58)",
+                    pointBackgroundColor: "rgb(255, 255, 255)",
+                    pointBorderWidth: 10,
+                    pointHoverRadius: 5,
+                    pointHoverBackgroundColor: "rgb(0, 0, 0)",
+                    pointHoverBorderColor: "rgba(220, 220, 220,1)",
+                    pointHoverBorderWidth: 2,
+                    pointRadius: 1,
+                    pointHitRadius: 10,
+                    data: [65, 59, 80, 81, 56, 55, 40]
+                  },
+                  {
+                    label: "Weekly Report",
+                    fill: true,
+                    lineTension: 0.3,
+                    backgroundColor: "rgba(184, 185, 210, .3)",
+                    borderColor: "rgb(35, 26, 136)",
+                    borderCapStyle: "butt",
+                    borderDash: [],
+                    borderDashOffset: 0.0,
+                    borderJoinStyle: "miter",
+                    pointBorderColor: "rgb(35, 26, 136)",
+                    pointBackgroundColor: "rgb(255, 255, 255)",
+                    pointBorderWidth: 10,
+                    pointHoverRadius: 5,
+                    pointHoverBackgroundColor: "rgb(0, 0, 0)",
+                    pointHoverBorderColor: "rgba(220, 220, 220, 1)",
+                    pointHoverBorderWidth: 2,
+                    pointRadius: 1,
+                    pointHitRadius: 10,
+                    data: [28, 48, 40, 19, 86, 27, 90]
+                  }
+                ]
+              }
         }
     }
     render(){
@@ -62,8 +111,12 @@ class Manual extends Component {
         <br></br>
         <br></br>
         <br></br>
-        <h1>Features</h1>
-            <Container>
+        <h1>Report</h1>
+        <MDBContainer>
+        <h3 className="mt-5">My Daily/Weekly Report</h3>
+        <Line data={this.state.dataLine} options={{ responsive: true }} />
+      </MDBContainer>
+            {/* <Container>
                 <Row className='show-grid'>
                     <Col md={4}>
                     <Card style={{ width: '18rem', height: '30rem' }}>
@@ -100,44 +153,7 @@ class Manual extends Component {
                         </Card>
                     </Col>
                 </Row>
-            </Container>
-
-
-            {/* <h2>Features:</h2>
-            <h4>Mark/Override timeslot</h4>
-            <ul>
-                <ol>1. Click one of the time slots</ol>
-                <ol>2. Click one of the colored tasks(Except delete)</ol>
-            </ul>
-            <h4>Delete timeslot</h4>
-            <ul>
-                <ol>1. Click one of the time slots</ol>
-                <ol>2. Click the blue "Delete" task</ol>
-            </ul>
-            <h4>Next/Previous day</h4>
-            <ul>
-                <ol>Still in progress</ol>
-            </ul>
-            <h4>Login/Signup/Session</h4>
-            <ul>
-                <ol>Still in progress</ol>
-            </ul>
-            <h2>Libraries:</h2>
-            <h4>Bootstrap</h4>
-            <ul>
-                <ol>install: npm install react-bootstrap@1.4.0 react-icons@3.11.0 --save</ol>
-                <ol>Bootstrap for React</ol>
-            </ul>
-            <h4>Moment.js</h4>
-            <ul>
-                <ol>install: npm install moment --save</ol>
-                <ol>Parse, validate, manipulate, and display dates and times in JS</ol>
-            </ul>
-            <h4>Framer motion</h4>
-            <ul>
-                <ol>install: npm install framer-motion</ol>
-                <ol>Animation libary for React</ol>
-            </ul> */}
+            </Container> */}
         </div>
         )
     }
