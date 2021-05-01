@@ -21,7 +21,7 @@ class Day extends Component {
         const { Today } = this.props.dayChanger;
         //console.log(Today);
         // let today = new Date().toJSON().slice(0,10).replace(/-/g,'/');
-        let today = Today.format('dddd MMM Do YY');
+        let today = Today.format('dddd MMM Do, YYYY');
         //let tomorrow = Today.clone().add(1, 'day').format('dddd');
         //let yesterday = Today.clone().add(-1, 'day').format('dddd');
         return(

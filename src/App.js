@@ -18,9 +18,12 @@ import NotFound from "./containers/NotFound"
 
 
 function App() {
+  // let callback = (today) => {
+  //   this.setState({date: today})
+  // }
   const [isAuthenticated, userHasAuthenticated] = useState(false);
   const [curUser, setCurUser] = useState(null);
-  const [curDate, setCurDate] = useState(moment().format('dddd MMM Do, YYYY'));
+  const [curDate, setCurDate] = useState("Saturday May 1st 21");
   const history = useHistory();
 
   useEffect(() => {
@@ -87,7 +90,7 @@ function App() {
           <Switch>
             <Route exact path='/' component={Landing} />
             <Route exact path='/landing' component={Landing} />
-            <Route exact path='/time' render={()=>{return <div className="MainContent"><DayContainer /><TaskContainer /></div>}}/>
+            <Route exact path='/time' render={()=>{return <div className="MainContent"><DayContainer/><TaskContainer /></div>}}/>
             <Route exact path='/Report' component={Report} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/signup" component={Signup} />
