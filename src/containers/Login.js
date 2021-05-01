@@ -10,7 +10,7 @@ import "./Login.css";
 
 export default function Login() {
   const history = useHistory();
-  const { userHasAuthenticated } = useAppContext();
+  const { userHasAuthenticated, setCurUser, curUser } = useAppContext();
   const [isLoading, setIsLoading] = useState(false);
   const [fields, handleFieldChange] = useFormFields({
     email: "",
@@ -27,7 +27,9 @@ export default function Login() {
     setIsLoading(true);
 
     try {
-      await Auth.signIn(fields.email, fields.password);
+      const user = await Auth.signIn(fields.email, fields.password);
+      setCurUser(user.username);
+      console.log(userHasAuthenticated);
       userHasAuthenticated(true);
       history.push("/");
     } catch (e) {

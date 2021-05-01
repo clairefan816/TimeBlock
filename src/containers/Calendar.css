@@ -1,0 +1,119 @@
+.Calendar{
+    /* background-color: rgb(44, 48, 81); */
+    display: grid;
+    width: auto;
+    /* height: 600px; */
+    grid-template-columns: 4fr 1fr;
+    grid-gap: 10px 10px;
+}
+.Day{
+    margin-left: 20px;
+    margin-right: 20px;
+    /* background-color: rgb(54, 59, 95); */
+    /* background-color: AliceBlue; */
+}
+.DateDisplay{
+    display: grid;
+    grid-template-columns: 10fr 37fr;
+ 
+
+}
+
+.Today{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    padding: 20px;
+    /* margin-left: 20%; */
+    /* margin-right: 20%; */
+    /* background-color: azure; */
+    text-align: center;
+    border-radius:0 0 50% 50%/0  0 100% 100%;
+    transition:5s ease;
+    background-size: 600%;
+    animation:anim 100s linear infinite;
+    /* filter: blur(30px); */
+}
+
+button {
+    display: block;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: #CDEAC0;
+    width: 200px;
+    height: 50px;
+    border-radius: 30px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text);
+    background-size: 100% 100%;
+    /* box-shadow: 0 0 0 7px #CDEAC0 inset; */
+    margin-bottom: 15px;
+}
+
+
+@keyframes background {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 400px 0;
+    }
+}
+
+.Calender-Container{
+    display: grid;
+    width: auto;
+    grid-template-columns: 1fr 4fr;
+    grid-gap: 10px 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    grid-auto-flow: column;
+}
+.Timeslots-Container{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+    /* box-shadow: 0px 0px 35px -16px  */
+
+}
+.TimeTags-Container {
+    margin-top: 30px;
+    display: grid;
+    grid-gap: 10px 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+    text-align: center;
+}
+.timeslot{
+    box-shadow: 0px 0px 32px -12px rgba(0, 0, 0, 0.75);
+    text-align: center;
+}
+
+
+
+.Task{
+    /* background-color: #EFEFEF; */
+    /* border: 2.5px dashed #66DCEC; */
+    margin-right: 20px;
+}
+
+.TaskContent{
+    margin-top: 104px;
+    margin-right: 40px;
+    position: fixed;
+    width: 200px;
+    z-index: 10;
+    overflow: auto;
+}
+
+.Task-Block{
+    margin: 15px;
+    padding: 5px;
+    text-align: center;
+
+    /* border: 1px solid black; */
+}
