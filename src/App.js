@@ -8,7 +8,8 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import { LinkContainer } from "react-router-bootstrap";
 import './App.css'
-import Calendar from './containers/Calendar'
+import DayContainer from './containers/DayContainer'
+import TaskContainer from './containers/TaskContainer'
 import Report from './components/Report/Report'
 import Landing from './components/Landing/Landing'
 import Login from './containers/Login'
@@ -19,7 +20,7 @@ import NotFound from "./containers/NotFound"
 function App() {
   const [isAuthenticated, userHasAuthenticated] = useState(false);
   const [curUser, setCurUser] = useState(null);
-  const [curDate, setCurDate] = useState(moment());
+  const [curDate, setCurDate] = useState(moment().format('dddd MMM Do, YYYY'));
   const history = useHistory();
 
   useEffect(() => {
@@ -28,8 +29,8 @@ function App() {
 
   async function onLoad() {
     console.log(curDate);
-    console.log(setCurDate);
-    console.log(userHasAuthenticated);
+    console.log(curUser);
+    console.log(isAuthenticated);
   }
 
   async function handleLogout() {
@@ -86,7 +87,7 @@ function App() {
           <Switch>
             <Route exact path='/' component={Landing} />
             <Route exact path='/landing' component={Landing} />
-            <Route exact path='/time' component={Calendar}/>
+            <Route exact path='/time' render={()=>{return <div className="MainContent"><DayContainer /><TaskContainer /></div>}}/>
             <Route exact path='/Report' component={Report} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/signup" component={Signup} />
