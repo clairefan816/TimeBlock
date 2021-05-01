@@ -19,10 +19,6 @@
     /* margin-right: 20%; */
     /* background-color: azure; */
     text-align: center;
-    background-image: linear-gradient(to right, 
-    #FF928B, #FFC0CB, #FA8072, #ff7431, 
-    #f7a500, #f7a500, #f7a500, #f7a500, 
-    #ff7431, #FA8072, #FFC0CB, #FF928B);
     border-radius:0 0 50% 50%/0  0 100% 100%;
     transition:5s ease;
     background-size: 600%;

@@ -6,3 +6,12 @@
     grid-template-columns: 4fr 1fr;
     grid-gap: 10px 10px;
 }
+.Header {
+    width: auto;
+    height: 100px;
+    text-align: center;
+}
+.link {
+    margin-left: 3%;
+    margin-right: 3%;
+}
